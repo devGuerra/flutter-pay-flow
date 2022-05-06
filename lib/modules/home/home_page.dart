@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../extract/extract_page.dart';
 import 'home_controller.dart';
+import '../extract/extract_page.dart';
+import '../meus_boletos/meus_boletos_page.dart';
+import '../../shared/models/user_model.dart';
 import '../../shared/themes/app_colors.dart';
 import '../../shared/themes/app_text_styles.dart';
-import '../meus_boletos/meus_boletos_page.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  final UserModel user;
+  const HomePage({Key? key, required this.user}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -33,19 +35,25 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyles.titleRegular,
                   children: [
                     TextSpan(
-                        text: 'Roberto, ',
-                        style: TextStyles.titleBoldBackground),
+                      text: '${widget.user.name}, ',
+                      style: TextStyles.titleBoldBackground,
+                    ),
                   ],
                 ),
               ),
-              subtitle: Text('Mantenha suas contas em dia',
-                  style: TextStyles.captionShape),
+              subtitle: Text(
+                'Mantenha suas contas em dia',
+                style: TextStyles.captionShape,
+              ),
               trailing: Container(
                 width: 48,
                 height: 48,
                 decoration: BoxDecoration(
                   color: Colors.black,
                   borderRadius: BorderRadius.circular(5),
+                  image: DecorationImage(
+                    image: NetworkImage(widget.user.photoURL!),
+                  ),
                 ),
               ),
             ),
@@ -71,8 +79,7 @@ class _HomePageState extends State<HomePage> {
             ),
             GestureDetector(
               onTap: () {
-                // Navigator.pushNamed(context, '/barcode_scanner');
-                Navigator.pushNamed(context, '/insert_boleto');
+                Navigator.pushNamed(context, '/barcode_scanner');
               },
               child: Container(
                 height: 56,

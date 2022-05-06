@@ -17,29 +17,31 @@ class _ExtratPageState extends State<ExtratPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 24, left: 24, right: 24),
-          child: Row(
-            children: [
-              Text("Meu Extrato", style: TextStyles.titleBoldHeading),
-            ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 24, left: 24, right: 24),
+            child: Row(
+              children: [
+                Text("Meu Extrato", style: TextStyles.titleBoldHeading),
+              ],
+            ),
           ),
-        ),
-        const Padding(
-          padding: EdgeInsets.symmetric(vertical: 24, horizontal: 24),
-          child: Divider(
-            color: AppColors.stroke,
-            thickness: 1,
-            height: 1,
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 24, horizontal: 24),
+            child: Divider(
+              color: AppColors.stroke,
+              thickness: 1,
+              height: 1,
+            ),
           ),
-        ),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24),
-          child: BoletoListWidget(controller: controller),
-        )
-      ],
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 24),
+            child: BoletoListWidget(controller: controller),
+          )
+        ],
+      ),
     );
   }
 }
