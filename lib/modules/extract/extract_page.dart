@@ -37,7 +37,7 @@ class _ExtratPageState extends State<ExtratPage> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24),
+            padding: const EdgeInsets.symmetric(horizontal: 24),
             child: BoletoListWidget(controller: controller),
           )
         ],

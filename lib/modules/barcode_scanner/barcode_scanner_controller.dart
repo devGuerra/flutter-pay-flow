@@ -42,7 +42,7 @@ class BarcodeScannerController {
   Future<void> scannerBarcode(InputImage inputImage) async {
     try {
       final barcodes = await barcodeScanner.processImage(inputImage);
-      var barcode;
+      String? barcode;
 
       for (Barcode item in barcodes) {
         barcode = item.displayValue;
