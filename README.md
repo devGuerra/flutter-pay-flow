@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="PayFlow" src=".github/payflow-logo.png" width="200px">
+  <img alt="PayFlow" src="https://user-images.githubusercontent.com/6579736/192690980-8c79a4b0-4671-4585-8c70-f0dc8a9c27cb.png" width="200px">
 </p>
 
 <p align="center">
@@ -34,7 +34,7 @@
 <h2 align="center">Layout 🎨</h2>
 
    <p align="center">
-      <img alt="PayFlow" title="PayFlow" src=".github/capa.png" />
+      <img alt="PayFlow" title="PayFlow" src="https://raw.githubusercontent.com/devGuerra/nlw-06-flutter/a1c1b3a1b9dc86021cdabef7ab5723b3083188f4/.github/capa.png" />
    </p>
 
    <p align="center">
